@@ -1,6 +1,7 @@
 <resources>
-    <string name="app_name">Android CV</string>
+    <string name="app_name">Martin Thorne\'s CV</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="main_activity_text">This app was created to show potential employees my abilities in coding Android applications.\n
+        It was created using <a href= "https://developer.android.com/studio">Android Studio.</a> \n \n
+        Navigate between sections by swiping left or right.</string>
 </resources>
