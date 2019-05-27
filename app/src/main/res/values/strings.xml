@@ -2,7 +2,7 @@
     <string name="app_name">Martin Thorne\'s CV</string>
 
     <string name="main_text">This app was created to show potential employees my abilities in coding Android applications.\n
-        It was created using <a href= "https://developer.android.com/studio">Android Studio.</a> \n \n
+        It was created using <a href="https://developer.android.com/studio">Android Studio.</a> \n \n
         Navigate between sections by swiping left or right.</string>
 
     <string name="about_me_text">In my last job I worked as a quality auditor for Sanoh UK. I was made redundant at the end of March 2019. This was due to a reduction cars being built, and therefore parts required. I was working evening shifts, which were being greatly reduced, and Sanoh did not feel that they needed anyone from quality on that shift. Since redundancy I have been studying to help improve my programming and maths skills.\n

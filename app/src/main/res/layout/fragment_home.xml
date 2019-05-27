@@ -5,10 +5,16 @@
     android:layout_height="match_parent"
     tools:context=".HomeFragment">
 
-    <TextView
-        android:id="@+id/homeTextView"
+    <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/main_text" />
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/homeTextView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/main_text" />
+
+    </android.support.v4.widget.NestedScrollView>
 
 </FrameLayout>

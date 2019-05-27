@@ -17,7 +17,7 @@ public class PageAdapterFragment extends FragmentPagerAdapter {
 
     @Override
     public Fragment getItem(int i) {
-        switch (i){
+        switch (i) {
             case 0:
                 return new HomeFragment();
             case 1:
