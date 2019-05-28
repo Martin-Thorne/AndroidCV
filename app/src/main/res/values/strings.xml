@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">Martin Thorne\'s CV</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="main_text">This app was created to show potential employees my abilities in coding Android applications.\n
         It was created using <a href="https://developer.android.com/studio">Android Studio.</a> \n \n
