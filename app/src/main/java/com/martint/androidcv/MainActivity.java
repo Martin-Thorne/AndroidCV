@@ -12,7 +12,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener{
+        implements NavigationView.OnNavigationItemSelectedListener, ViewPager.OnPageChangeListener{
 
     ViewPager viewPager;
 
@@ -32,11 +32,16 @@ public class MainActivity extends AppCompatActivity
                 this, drawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close );
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
+
+        // Sets up listener for navigation drawer user selection
         navigationView.setNavigationItemSelectedListener(this);
 
         // Sets up view pager to allow the swiping between the fragments
         viewPager = findViewById(R.id.viewPager);
         viewPager.setAdapter(new PageAdapterFragment(getSupportFragmentManager()));
+
+        // Sets up listener for changes in fragment selection
+        viewPager.addOnPageChangeListener(this);
     }
 
     /**
@@ -77,5 +82,46 @@ public class MainActivity extends AppCompatActivity
         drawerLayout.closeDrawer(GravityCompat.START);
 
         return true;
+    }
+
+    @Override
+    public void onPageScrolled(int i, float v, int i1) {
+
+    }
+
+    /**
+     * Changes toolBar title to reflect content of page
+     * @param i
+     */
+    @Override
+    public void onPageSelected(int i) {
+        switch (i) {
+            case 0:
+                getSupportActionBar().setTitle(R.string.app_name);
+                break;
+            case 1:
+                getSupportActionBar().setTitle(R.string.about_me_title);
+                break;
+            case 2:
+                getSupportActionBar().setTitle(R.string.education_title);
+                break;
+            case 3:
+                getSupportActionBar().setTitle(R.string.qualification_title);
+                break;
+            case 4:
+                getSupportActionBar().setTitle(R.string.computing_project_title);
+                break;
+            case 5:
+                getSupportActionBar().setTitle(R.string.employment_title);
+                break;
+            case 6:
+                getSupportActionBar().setTitle(R.string.interests_title);
+                break;
+        }
+    }
+
+    @Override
+    public void onPageScrollStateChanged(int i) {
+
     }
 }
