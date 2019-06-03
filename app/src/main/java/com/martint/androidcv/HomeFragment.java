@@ -2,13 +2,15 @@ package com.martint.androidcv;
 
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.text.method.LinkMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import com.leinardi.android.speeddial.SpeedDialActionItem;
+import com.leinardi.android.speeddial.SpeedDialView;
 
 
 /**
@@ -32,16 +34,21 @@ public class HomeFragment extends Fragment {
         TextView textView = view.findViewById(R.id.homeTextView);
         textView.setMovementMethod(LinkMovementMethod.getInstance());
 
-        //Set up listener for FAB button
-        FloatingActionButton fab = view.findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //TODO: Add FAB click behavior
-            }
-        });
+        // Set up FAB speed dial
+        SpeedDialView speedDialView = view.findViewById(R.id.speedDial);
+        speedDialView.addActionItem(
+                new SpeedDialActionItem.Builder(R.id.email, R.drawable.ic_email_24)
+                        .create()
+        );
+        speedDialView.addActionItem(
+                new SpeedDialActionItem.Builder(R.id.fab_linkedIn, R.drawable.ic_linkedin_24)
+                        .create()
+        );
+        speedDialView.addActionItem(
+                new SpeedDialActionItem.Builder(R.id.fab_gitHub, R.drawable.ic_github_24)
+                        .create()
+        );
 
         return view;
     }
-
 }
