@@ -12,7 +12,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener, ViewPager.OnPageChangeListener{
+        implements NavigationView.OnNavigationItemSelectedListener, ViewPager.OnPageChangeListener {
 
     ViewPager viewPager;
 
@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawerLayout = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close );
+                this, drawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
 
@@ -46,6 +46,7 @@ public class MainActivity extends AppCompatActivity
 
     /**
      * Handles navigation drawer menu item selection
+     *
      * @param menuItem
      * @return
      */
@@ -53,7 +54,7 @@ public class MainActivity extends AppCompatActivity
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
         int id = menuItem.getItemId();
 
-        switch (id){
+        switch (id) {
             case R.id.nav_item_home:
                 viewPager.setCurrentItem(0, true);
                 break;
@@ -91,6 +92,7 @@ public class MainActivity extends AppCompatActivity
 
     /**
      * Changes toolBar title to reflect content of page
+     *
      * @param i
      */
     @Override
