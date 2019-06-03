@@ -2,19 +2,26 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <group>
-        <item android:id="@+id/nav_item_home"
+        <item
+            android:id="@+id/nav_item_home"
             android:title="@string/main_title" />
-        <item android:id="@+id/nav_item_about_me"
+        <item
+            android:id="@+id/nav_item_about_me"
             android:title="@string/about_me_title" />
-        <item android:id="@+id/nav_item_education"
+        <item
+            android:id="@+id/nav_item_education"
             android:title="@string/education_title" />
-        <item android:id="@+id/nav_item_qualification"
+        <item
+            android:id="@+id/nav_item_qualification"
             android:title="@string/qualification_title" />
-        <item android:id="@+id/nav_item_computing_project"
+        <item
+            android:id="@+id/nav_item_computing_project"
             android:title="@string/computing_project_title" />
-        <item android:id="@+id/nav_item_employment"
+        <item
+            android:id="@+id/nav_item_employment"
             android:title="@string/employment_title" />
-        <item android:id="@+id/nav_item_interests"
+        <item
+            android:id="@+id/nav_item_interests"
             android:title="@string/interests_title" />
     </group>
 </menu>

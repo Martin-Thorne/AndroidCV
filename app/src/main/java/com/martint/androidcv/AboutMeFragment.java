@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 
 
 /**
- * A simple {@link Fragment} subclass.
+ * This shows the 'About Me' section of my CV.
  */
 public class AboutMeFragment extends Fragment {
 

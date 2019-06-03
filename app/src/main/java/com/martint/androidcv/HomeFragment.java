@@ -2,6 +2,7 @@ package com.martint.androidcv;
 
 
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.text.method.LinkMovementMethod;
 import android.view.LayoutInflater;
@@ -30,6 +31,15 @@ public class HomeFragment extends Fragment {
         // Make links in fragments TextView clickable
         TextView textView = view.findViewById(R.id.homeTextView);
         textView.setMovementMethod(LinkMovementMethod.getInstance());
+
+        //Set up listener for FAB button
+        FloatingActionButton fab = view.findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //TODO: Add FAB click behavior
+            }
+        });
 
         return view;
     }
