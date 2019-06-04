@@ -38,14 +38,17 @@ public class HomeFragment extends Fragment {
         SpeedDialView speedDialView = view.findViewById(R.id.speedDial);
         speedDialView.addActionItem(
                 new SpeedDialActionItem.Builder(R.id.email, R.drawable.ic_email_24)
+                        .setLabel(R.string.speed_dial_email)
                         .create()
         );
         speedDialView.addActionItem(
                 new SpeedDialActionItem.Builder(R.id.fab_linkedIn, R.drawable.ic_linkedin_24)
+                        .setLabel(R.string.speed_dial_linkedin)
                         .create()
         );
         speedDialView.addActionItem(
                 new SpeedDialActionItem.Builder(R.id.fab_gitHub, R.drawable.ic_github_24)
+                        .setLabel(R.string.speed_dial_github)
                         .create()
         );
 
