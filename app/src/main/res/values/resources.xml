@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <item name="email" type="id" />
+    <item name="fab_email" type="id" />
     <item name="fab_linkedIn" type="id" />
     <item name="fab_gitHub" type="id" />
     <item name="fab_action4" type="id" />

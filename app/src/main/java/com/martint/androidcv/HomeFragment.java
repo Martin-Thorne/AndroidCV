@@ -1,6 +1,8 @@
 package com.martint.androidcv;
 
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.text.method.LinkMovementMethod;
@@ -37,7 +39,7 @@ public class HomeFragment extends Fragment {
         // Set up FAB speed dial
         SpeedDialView speedDialView = view.findViewById(R.id.speedDial);
         speedDialView.addActionItem(
-                new SpeedDialActionItem.Builder(R.id.email, R.drawable.ic_email_24)
+                new SpeedDialActionItem.Builder(R.id.fab_email, R.drawable.ic_email_24)
                         .setLabel(R.string.speed_dial_email)
                         .create()
         );
@@ -52,6 +54,49 @@ public class HomeFragment extends Fragment {
                         .create()
         );
 
+        //Set up FAB speed dial links
+        speedDialView.setOnActionSelectedListener(new SpeedDialView.OnActionSelectedListener() {
+            @Override
+            public boolean onActionSelected(SpeedDialActionItem speedDialActionItem) {
+                switch (speedDialActionItem.getId()) {
+                    case R.id.fab_email:
+                        composeEmail();
+                        return false; // true to keep the Speed Dial open
+                    case R.id.fab_linkedIn:
+                        openWebPage("https://www.linkedin.com/in/martinjthorne/");
+                        return false;
+                    case R.id.fab_gitHub:
+                        openWebPage("https://github.com/Martin-Thorne");
+                        return false;
+                    default:
+                        return false;
+                }
+            }
+        });
         return view;
+    }
+
+    /**
+     * Intent to send email
+     */
+    public void composeEmail() {
+        Intent intent = new Intent(Intent.ACTION_SENDTO);
+        intent.setData(Uri.parse("mailto:martinjthorne@gmail.com"));
+        if (intent.resolveActivity(getActivity().getPackageManager()) != null) {
+            startActivity(intent);
+        }
+    }
+
+    /**
+     * Intent to open web page
+     *
+     * @param url
+     */
+    public void openWebPage(String url) {
+        Uri webpage = Uri.parse(url);
+        Intent intent = new Intent(Intent.ACTION_VIEW, webpage);
+        if (intent.resolveActivity(getActivity().getPackageManager()) != null) {
+            startActivity(intent);
+        }
     }
 }
