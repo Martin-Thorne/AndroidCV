@@ -6,6 +6,8 @@
     <string name="speed_dial_linkedin">LinkedIn</string>
     <string name="speed_dial_github">GitHub</string>
     <string name="settings_menu">Settings</string>
+    <string name="settings_popup_increase_text_size">Increase text size</string>
+    <string name="settings_popup_decrease_text_size">Decrease text size</string>
 
     <string name="main_title">Home</string>
     <string name="main_text">This app was created to show potential employees my abilities in coding Android applications.\n

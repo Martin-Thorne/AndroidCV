@@ -8,12 +8,15 @@ import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.PopupMenu;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener, ViewPager.OnPageChangeListener {
+        implements NavigationView.OnNavigationItemSelectedListener, ViewPager.OnPageChangeListener, PopupMenu.OnMenuItemClickListener {
 
     ViewPager viewPager;
 
@@ -138,5 +141,36 @@ public class MainActivity extends AppCompatActivity
     @Override
     public void onPageScrollStateChanged(int i) {
 
+    }
+
+    /**
+     * Handles settings icon selected in toolbar. Opens setting popup menu
+     * @param item
+     * @return
+     */
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int menu = item.getItemId();
+        if (menu == R.id.action_settings) {
+            View view = this.findViewById(R.id.action_settings);
+            // Opens popup menu and sets up listener for item selection
+            PopupMenu popup = new PopupMenu(this, view);
+            popup.setOnMenuItemClickListener(this);
+            MenuInflater inflater = popup.getMenuInflater();
+            inflater.inflate(R.menu.popup_menu, popup.getMenu());
+            popup.show();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    /**
+     * Handles setting popup menu selection
+     * @param menuItem
+     * @return
+     */
+    @Override
+    public boolean onMenuItemClick(MenuItem menuItem) {
+        return false;
     }
 }
