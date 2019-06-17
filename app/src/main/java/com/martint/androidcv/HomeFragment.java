@@ -18,8 +18,9 @@ import com.leinardi.android.speeddial.SpeedDialView;
 /**
  * This shows the 'Home' section of my CV.
  */
-public class HomeFragment extends Fragment {
+public class HomeFragment extends Fragment implements FragmentSettings {
 
+    TextView textView;
 
     public HomeFragment() {
         // Required empty public constructor
@@ -33,8 +34,11 @@ public class HomeFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
 
         // Make links in fragments TextView clickable
-        TextView textView = view.findViewById(R.id.homeTextView);
+        textView = view.findViewById(R.id.homeTextView);
         textView.setMovementMethod(LinkMovementMethod.getInstance());
+
+        //Sets the text size
+        textView.setTextSize(Settings.getTextSize());
 
         // Set up FAB speed dial
         SpeedDialView speedDialView = view.findViewById(R.id.speedDial);
@@ -98,5 +102,20 @@ public class HomeFragment extends Fragment {
         if (intent.resolveActivity(getActivity().getPackageManager()) != null) {
             startActivity(intent);
         }
+    }
+
+    /**
+     * Used when user wishes to changes text size
+     *
+     * @param textSelection    Indicates if user wants to increase/decrease text size
+     * @param fragmentSelected
+     */
+    @Override
+    public void setTextSize(int textSelection, int fragmentSelected) {
+        //If fragment was the first in collection it sets the text size
+        if (fragmentSelected == 0) {
+            Settings.setTextSize(textSelection);
+        }
+        textView.setTextSize(Settings.getTextSize());
     }
 }

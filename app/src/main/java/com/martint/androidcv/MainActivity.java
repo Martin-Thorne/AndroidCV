@@ -3,6 +3,7 @@ package com.martint.androidcv;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.Fragment;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
@@ -14,6 +15,8 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, ViewPager.OnPageChangeListener, PopupMenu.OnMenuItemClickListener {
@@ -145,6 +148,7 @@ public class MainActivity extends AppCompatActivity
 
     /**
      * Handles settings icon selected in toolbar. Opens setting popup menu
+     *
      * @param item
      * @return
      */
@@ -166,11 +170,39 @@ public class MainActivity extends AppCompatActivity
 
     /**
      * Handles setting popup menu selection
+     *
      * @param menuItem
      * @return
      */
     @Override
     public boolean onMenuItemClick(MenuItem menuItem) {
-        return false;
+
+        // Collection of all active fragments
+        List<Fragment> allFragments = getSupportFragmentManager().getFragments();
+        // Holds the choice to increase/decrease text size
+        int itemId = menuItem.getItemId();
+        // Takes all active fragments and updates the text size
+        for (int i = 0; i < allFragments.size(); i++) {
+            Fragment fragment = allFragments.get(i);
+            String name = fragment.getClass().getName();
+            // i is used to ensure that only the first looped fragment sets the text size in Settings
+            if (name.contains("HomeFragment")) {
+                ((HomeFragment) fragment).setTextSize(itemId, i);
+            } else if (name.contains("AboutMeFragment")) {
+                ((AboutMeFragment) fragment).setTextSize(itemId, i);
+            } else if (name.contains("EducationFragment")) {
+                ((EducationFragment) fragment).setTextSize(itemId, i);
+            } else if (name.contains("QualificationsFragment")) {
+                ((QualificationsFragment) fragment).setTextSize(itemId, i);
+            } else if (name.contains("ComputingProjectFragment")) {
+                ((ComputingProjectFragment) fragment).setTextSize(itemId, i);
+            } else if (name.contains("EmploymentFragment")) {
+                ((EmploymentFragment) fragment).setTextSize(itemId, i);
+            } else if (name.contains("InterestsFragment")) {
+                ((InterestsFragment) fragment).setTextSize(itemId, i);
+            }
+        }
+        return true;
     }
+
 }

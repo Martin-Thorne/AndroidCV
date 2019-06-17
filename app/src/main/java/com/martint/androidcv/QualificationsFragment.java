@@ -6,13 +6,15 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 
 /**
  * This shows the 'Qualifications' section of my CV.
  */
-public class QualificationsFragment extends Fragment {
+public class QualificationsFragment extends Fragment implements FragmentSettings {
 
+    TextView textView;
 
     public QualificationsFragment() {
         // Required empty public constructor
@@ -23,7 +25,27 @@ public class QualificationsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_qualifications, container, false);
+        View view = inflater.inflate(R.layout.fragment_qualifications, container, false);
+
+        //Sets the text size
+        textView = (TextView) view.findViewById(R.id.qualificationsTextView);
+        textView.setTextSize(Settings.getTextSize());
+
+        return view;
     }
 
+    /**
+     * Used when user wishes to changes text size
+     *
+     * @param textSelection    Indicates if user wants to increase/decrease text size
+     * @param fragmentSelected
+     */
+    @Override
+    public void setTextSize(int textSelection, int fragmentSelected) {
+        //If fragment was the first in collection it sets the text size
+        if (fragmentSelected == 0) {
+            Settings.setTextSize(textSelection);
+        }
+        textView.setTextSize(Settings.getTextSize());
+    }
 }
