@@ -17,22 +17,7 @@ public class PageAdapterFragment extends FragmentPagerAdapter {
 
     @Override
     public Fragment getItem(int i) {
-        switch (i) {
-            case 0:
-                return new HomeFragment();
-            case 1:
-                return new AboutMeFragment();
-            case 2:
-                return new EducationFragment();
-            case 3:
-                return new QualificationsFragment();
-            case 4:
-                return new ComputingProjectFragment();
-            case 5:
-                return new EmploymentFragment();
-            default:
-                return new InterestsFragment();
-        }
+        return CVFragment.newInstance(i);
     }
 
     @Override

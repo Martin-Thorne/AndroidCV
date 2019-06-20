@@ -3,17 +3,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".QualificationsFragment">
+    tools:context=".CVFragment">
 
     <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/qualificationsTextView"
+            android:id="@+id/CVTextView"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="@string/qualification_text" />
+            android:layout_height="match_parent" />
 
     </android.support.v4.widget.NestedScrollView>
 
