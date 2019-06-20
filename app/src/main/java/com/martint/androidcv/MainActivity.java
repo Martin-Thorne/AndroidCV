@@ -22,6 +22,9 @@ public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, ViewPager.OnPageChangeListener, PopupMenu.OnMenuItemClickListener {
 
     ViewPager viewPager;
+    // Boolean values stating if pop up menu items should be enabled
+    boolean increasePopupEnabled = true;
+    boolean decreasePopupEnabled = true;
 
 
     @Override
@@ -164,6 +167,9 @@ public class MainActivity extends AppCompatActivity
             MenuInflater inflater = popup.getMenuInflater();
             inflater.inflate(R.menu.popup_menu, popup.getMenu());
             popup.show();
+            // Checks if popup menu items should be enabled. This is dependant on text size.
+            popup.getMenu().findItem(R.id.increase_text_size).setEnabled(isIncreasePopupEnabled());
+            popup.getMenu().findItem(R.id.decrease_text_size).setEnabled(isDecreasePopupEnabled());
             return true;
         }
         return super.onOptionsItemSelected(item);
@@ -182,13 +188,48 @@ public class MainActivity extends AppCompatActivity
         List<Fragment> allFragments = getSupportFragmentManager().getFragments();
         // Holds the choice to increase/decrease text size
         int itemId = menuItem.getItemId();
+        int textSize = 16;
         // Takes all active fragments and updates the text size
         for (int i = 0; i < allFragments.size(); i++) {
             Fragment fragment = allFragments.get(i);
-            // i is used to ensure that only the first looped fragment sets the text size in Settings
-            ((CVFragment) fragment).setTextSize(itemId, i);
+            // i is used to ensure that only the first looped fragment sets the text size in Settings.
+            // Return value is the text size after change
+            textSize = ((CVFragment) fragment).setTextSize(itemId, i);
         }
+        setPopupItemEnabled(itemId, textSize);
         allFragments.clear();
         return true;
     }
+
+    /**
+     * Sets increasePopupEnabled/decreasePopupEnabled.
+     *
+     * @param menuitem which popup menu item to check
+     * @param textSize the current text size
+     */
+    private void setPopupItemEnabled(int menuitem, int textSize) {
+        if (menuitem == R.id.increase_text_size && textSize == 20) {
+            increasePopupEnabled = false;
+        } else if (menuitem == R.id.decrease_text_size && textSize == 14) {
+            decreasePopupEnabled = false;
+        } else {
+            increasePopupEnabled = true;
+            decreasePopupEnabled = true;
+        }
+    }
+
+    /**
+     * @return if popup menu item 'Increase text size' should be enabled
+     */
+    public boolean isIncreasePopupEnabled() {
+        return increasePopupEnabled;
+    }
+
+    /**
+     * @return if popup menu item 'Decrease text size' should be enabled
+     */
+    public boolean isDecreasePopupEnabled() {
+        return decreasePopupEnabled;
+    }
+
 }
