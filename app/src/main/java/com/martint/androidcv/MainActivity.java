@@ -188,7 +188,7 @@ public class MainActivity extends AppCompatActivity
         List<Fragment> allFragments = getSupportFragmentManager().getFragments();
         // Holds the choice to increase/decrease text size
         int itemId = menuItem.getItemId();
-        int textSize = 16;
+        int textSize = R.integer.text_size_medium;
         // Takes all active fragments and updates the text size
         for (int i = 0; i < allFragments.size(); i++) {
             Fragment fragment = allFragments.get(i);
@@ -208,9 +208,9 @@ public class MainActivity extends AppCompatActivity
      * @param textSize the current text size
      */
     private void setPopupItemEnabled(int menuitem, int textSize) {
-        if (menuitem == R.id.increase_text_size && textSize == 20) {
+        if (menuitem == R.id.increase_text_size && textSize == R.integer.text_size_large) {
             increasePopupEnabled = false;
-        } else if (menuitem == R.id.decrease_text_size && textSize == 14) {
+        } else if (menuitem == R.id.decrease_text_size && textSize == R.integer.text_size_small) {
             decreasePopupEnabled = false;
         } else {
             increasePopupEnabled = true;

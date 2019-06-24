@@ -4,4 +4,8 @@
     <item name="fab_linkedIn" type="id" />
     <item name="fab_gitHub" type="id" />
     <item name="fab_action4" type="id" />
+
+    <integer name="text_size_small">14</integer>
+    <integer name="text_size_medium">16</integer>
+    <integer name="text_size_large">20</integer>
 </resources>

@@ -72,13 +72,14 @@ public class CVFragment extends Fragment {
         textView.setMovementMethod(LinkMovementMethod.getInstance());
 
         //Sets the text size
-        textView.setTextSize(Settings.getTextSize());
+        textView.setTextSize(getResources().getInteger(Settings.getTextSize()));
 
         return view;
     }
 
     /**
      * Set up FAB speed dial
+     *
      * @param view
      */
     public void setFAB(View view) {
@@ -184,7 +185,7 @@ public class CVFragment extends Fragment {
         if (fragmentSelected == 0) {
             Settings.setTextSize(textSelection);
         }
-        textView.setTextSize(Settings.getTextSize());
+        textView.setTextSize(getResources().getInteger(Settings.getTextSize()));
         return Settings.getTextSize();
     }
 }
