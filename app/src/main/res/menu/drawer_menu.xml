@@ -6,6 +6,9 @@
             android:id="@+id/nav_item_home"
             android:title="@string/main_title" />
         <item
+            android:id="@+id/nav_item_complete"
+            android:title="@string/complete_title" />
+        <item
             android:id="@+id/nav_item_about_me"
             android:title="@string/about_me_title" />
         <item

@@ -81,23 +81,26 @@ public class MainActivity extends AppCompatActivity
             case R.id.nav_item_home:
                 viewPager.setCurrentItem(0, true);
                 break;
-            case R.id.nav_item_about_me:
+            case R.id.nav_item_complete:
                 viewPager.setCurrentItem(1, true);
                 break;
-            case R.id.nav_item_education:
+            case R.id.nav_item_about_me:
                 viewPager.setCurrentItem(2, true);
                 break;
-            case R.id.nav_item_qualification:
+            case R.id.nav_item_education:
                 viewPager.setCurrentItem(3, true);
                 break;
-            case R.id.nav_item_computing_project:
+            case R.id.nav_item_qualification:
                 viewPager.setCurrentItem(4, true);
                 break;
-            case R.id.nav_item_employment:
+            case R.id.nav_item_computing_project:
                 viewPager.setCurrentItem(5, true);
                 break;
-            case R.id.nav_item_interests:
+            case R.id.nav_item_employment:
                 viewPager.setCurrentItem(6, true);
+                break;
+            case R.id.nav_item_interests:
+                viewPager.setCurrentItem(7, true);
                 break;
         }
 
