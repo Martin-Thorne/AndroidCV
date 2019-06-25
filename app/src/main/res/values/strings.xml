@@ -8,130 +8,146 @@
     <string name="settings_menu">Settings</string>
     <string name="settings_popup_increase_text_size">Increase text size</string>
     <string name="settings_popup_decrease_text_size">Decrease text size</string>
+    <string name="complete_title">Complete CV</string>
 
     <string name="main_title">Home</string>
-    <string name="main_text">This app was created to show potential employees my abilities in coding Android applications.\n
-        It was created using <a href="https://developer.android.com/studio">Android Studio.</a> \n \n
-        Navigate between sections by swiping left or right.</string>
+    <string name="main_text"><![CDATA[This app was created to show potential employees my abilities in coding Android applications.<br>
+        It was created using <a href="https://developer.android.com/studio">Android Studio.</a> <br> <br>
+        Navigate between sections by swiping left or right.]]></string>
 
     <string name="about_me_title">About Me</string>
-    <string name="about_me_text">In my last job I worked as a quality auditor for Sanoh UK. I was made redundant at the end of March 2019. This was due to a reduction cars being built, and therefore parts required. I was working evening shifts, which were being greatly reduced, and Sanoh did not feel that they needed anyone from quality on that shift. Since redundancy I have been studying to help improve my programming and maths skills.\n
-        Whist working for Sanoh I studied with the Open University. The courses have been on computing and IT. In 2012 I achieved a degree. On my way to the degree I obtained a Diploma in Computing and two certificates.\n
-        One of the main reasons for studying, along with the sense of achievement and interest in the subject, was to change career and work in the areas of computing and IT. My main area of interest is Java programming. This is due to the language, plus learning about object orientated programming, being a major aspect of my study. Plus the programming aspects were the most challenging, fulfilling and enjoyable part of my study. In my final year of OU study I programmed for the Android mobile operating system. I find mobile development very interesting and continue to create apps.</string>
+    <string name="about_me_text"><![CDATA[In my last job I worked as a quality auditor for Sanoh UK. I was made redundant at the end of March 2019. This was due to a reduction cars being built, and therefore parts required. I was working evening shifts, which were being greatly reduced, and Sanoh did not feel that they needed anyone from quality on that shift. Since redundancy I have been studying to help improve my programming and maths skills.<br>
+        Whist working for Sanoh I studied with the Open University. The courses have been on computing and IT. In 2012 I achieved a degree. On my way to the degree I obtained a Diploma in Computing and two certificates.<br>
+        One of the main reasons for studying, along with the sense of achievement and interest in the subject, was to change career and work in the areas of computing and IT. My main area of interest is Java programming. This is due to the language, plus learning about object orientated programming, being a major aspect of my study. Plus the programming aspects were the most challenging, fulfilling and enjoyable part of my study. In my final year of OU study I programmed for the Android mobile operating system. I find mobile development very interesting and continue to create apps.<br>]]></string>
 
     <string name="education_title">Education</string>
-    <string name="education_text">
-         Year: 2001\n
-        Course: T171\n
-        Title: You, Your Computer And The Net\n
-        Level: 1\n
-        Points: 30\n
-        Result: Pass\n\n
-        Year: 2006\n
-        Course: M150\n
-        Title: Data, Computing And The Net\n
-        Level: 1\n
-        Points: 30\n
-        Result: Pass\n\n
-        Year: 2006\n
-        Course: M255\n
-        Title: Object-Orientated Programming With Java\n
-        Level: 2\n
-        Points: 30\n
-        Result: Grade 2\n\n
-        Year: 2007\n
-        Course: MT262\n
-        Title: Putting Computer Systems To Work\n
-        Level: 2\n
-        Points: 30\n
-        Result: Grade 2\n\n
-        Year: 2007\n
-        Course: MU120\n
-        Title: Open Mathematics\n
-        Level: 1\n
-        Points: 30\n
-        Result: Pass\n
-        Year: 2008\n
-        Course: M256\n
-        Title: Software Development With Java\n
-        Level: 2\n
-        Points: 30\n
-        Result: Grade 3\n
-        Year: 2008\n
-        Course: MT264\n
-        Title: Designing Applications With Visual Basic\n
-        Level: 2\n
-        Points: 30\n
-        Result: Grade 1\n
-        Year: 2009\n
-        Course: T224\n
-        Title: Computer And Processors\n
-        Level: 2\n
-        Points: 30\n
-        Result: Grade 2\n\n
-        Year: 2010\n
-        Course: T215\n
-        Title: Communication And Information Technologies\n
-        Level: 2\n
-        Points: 60\n
-        Result: Grade 2\n\n
-        Year: 2011\n
-        Course: M363\n
-        Title: Software Engineering With Object\n
-        Level: 3\n
-        Points: 30\n
-        Result: Grade 2\n\n
-        Year: 2011\n
-        Course: T324\n
-        Title: Keeping Ahead In Information And Communication Technologies\n
-        Level: 3\n
-        Points: 30\n
-        Result: Grade 2\n\n
-        Year: 2012\n
-        Course: M364\n
-        Title: Fundamentals Of Interaction Design\n
-        Level: 3\n
-        Points: 30\n
-        Result: Grade 2\n\n
-        Year: 2012\n
-        Course: TM470\n
-        Title: The Computing And IT Project\n
-        Level: 3\n
-        Points: 30\n
-        Result: Grade 2
+    <string name="education_text"><![CDATA[
+         Year: 2001<br>
+        Course: T171<br>
+        Title: You, Your Computer And The Net<br>
+        Level: 1<br>
+        Points: 30<br>
+        Result: Pass<br><br>
+        Year: 2006<br>
+        Course: M150<br>
+        Title: Data, Computing And The Net<br>
+        Level: 1<br>
+        Points: 30<br>
+        Result: Pass<br><br>
+        Year: 2006<br>
+        Course: M255<br>
+        Title: Object-Orientated Programming With Java<br>
+        Level: 2<br>
+        Points: 30<br>
+        Result: Grade 2<br><br>
+        Year: 2007<br>
+        Course: MT262<br>
+        Title: Putting Computer Systems To Work<br>
+        Level: 2<br>
+        Points: 30<br>
+        Result: Grade 2<br><br>
+        Year: 2007<br>
+        Course: MU120<br>
+        Title: Open Mathematics<br>
+        Level: 1<br>
+        Points: 30<br>
+        Result: Pass<br><br>
+        Year: 2008<br>
+        Course: M256<br>
+        Title: Software Development With Java<br>
+        Level: 2<br>
+        Points: 30<br>
+        Result: Grade 3<br><br>
+        Year: 2008<br>
+        Course: MT264<br>
+        Title: Designing Applications With Visual Basic<br>
+        Level: 2<br>
+        Points: 30<br>
+        Result: Grade 1<br><br>
+        Year: 2009<br>
+        Course: T224<br>
+        Title: Computer And Processors<br>
+        Level: 2<br>
+        Points: 30<br>
+        Result: Grade 2<br><br>
+        Year: 2010<br>
+        Course: T215<br>
+        Title: Communication And Information Technologies<br>
+        Level: 2<br>
+        Points: 60<br>
+        Result: Grade 2<br><br>
+        Year: 2011<br>
+        Course: M363<br>
+        Title: Software Engineering With Object<br>
+        Level: 3<br>
+        Points: 30<br>
+        Result: Grade 2<br><br>
+        Year: 2011<br>
+        Course: T324<br>
+        Title: Keeping Ahead In Information And Communication Technologies<br>
+        Level: 3<br>
+        Points: 30<br>
+        Result: Grade 2<br><br>
+        Year: 2012<br>
+        Course: M364<br>
+        Title: Fundamentals Of Interaction Design<br>
+        Level: 3<br>
+        Points: 30<br>
+        Result: Grade 2<br><br>
+        Year: 2012<br>
+        Course: TM470<br>
+        Title: The Computing And IT Project<br>
+        Level: 3<br>
+        Points: 30<br>
+        Result: Grade 2<br>]]>
     </string>
 
     <string name="qualification_title">Qualifications</string>
-    <string name="qualification_text"><b>2012: Bachelor of Science (Honours) in Information Technology and Computing (2.1)</b>\n
-        The degree recognizes up-to-date knowledge of important concepts and trends in information technology and computing and their context. Recipients will be able to apply there knowledge and understanding in practical situations, and will have a range of relevant professional and key skills.\n
-        <b>2009: Diploma in Computing</b>\n
-        The diploma recognizes achievement in a coherent set of Open University undergraduate courses within the field of computing. It does this by encouraging students to study a selection of up-to-date courses in major computing topics of relevance to current practice.\n
-        <b>2008: Certificate in Computing and Mathematics</b>\n
-        This award recognizes that the certificate holder will have gained basic skills in both mathematics and computing. In particular the holder of the certificate will have a good knowledge of basic mathematical concepts such as sequences, functions and algebra and knowledge of the main IT development activities such as programming and testing. Students who hold this certificate will have the skills which are necessary to continue their further studies in both mathematics and computing.\n
-        <b>2006: Certificate in Information Technology and Computing</b>\n
-        Recipients of this certificate have an understanding of fundamental principles in computing, computer hardware and the Internet. They are able to evaluate critically developments in relevant technologies. They also have developed skills at level 1 in communication, information literacy, abstraction and group working.
+    <string name="qualification_text"><![CDATA[<b>2012: Bachelor of Science (Honours) in Information Technology and Computing (2.1)</b><br>
+        The degree recognizes up-to-date knowledge of important concepts and trends in information technology and computing and their context. Recipients will be able to apply there knowledge and understanding in practical situations, and will have a range of relevant professional and key skills.<br>
+        <b>2009: Diploma in Computing</b><br>
+        The diploma recognizes achievement in a coherent set of Open University undergraduate courses within the field of computing. It does this by encouraging students to study a selection of up-to-date courses in major computing topics of relevance to current practice.<br>
+        <b>2008: Certificate in Computing and Mathematics</b><br>
+        This award recognizes that the certificate holder will have gained basic skills in both mathematics and computing. In particular the holder of the certificate will have a good knowledge of basic mathematical concepts such as sequences, functions and algebra and knowledge of the main IT development activities such as programming and testing. Students who hold this certificate will have the skills which are necessary to continue their further studies in both mathematics and computing.<br>
+        <b>2006: Certificate in Information Technology and Computing</b><br>
+        Recipients of this certificate have an understanding of fundamental principles in computing, computer hardware and the Internet. They are able to evaluate critically developments in relevant technologies. They also have developed skills at level 1 in communication, information literacy, abstraction and group working.<br>]]>
     </string>
 
     <string name="computing_project_title">Computing Project</string>
-    <string name="computing_project_text">My final year of study included the Computing And IT Project. Unlike other courses the study area was largely left up to the student (as long as it fitted in with previous courses). I chose to write programs for the Google Android mobile operating system. This is done with Java using a SDK from Google.\n
+    <string name="computing_project_text"><![CDATA[My final year of study included the Computing And IT Project. Unlike other courses the study area was largely left up to the student (as long as it fitted in with previous courses). I chose to write programs for the Google Android mobile operating system. This is done with Java using a SDK from Google.<br>
         The basic idea was to build two apps that would test the idea that personal navigation could be done via phones vibration function. Advantages of this is that the user is concentrating on the world around them, not their phone. Also, as the phone is not in public view, risk of theft is reduced. \
-        Programming these apps involved a lot of research into programming for Android. The second app also used the Google maps API.\n
-        As well as programming the final report also contained use cases, state machine diagram, activity diagram, code beautification and descriptions of how the code was created via prototyping (Scope/Design, Notes on the programming, Testing). \n
-        Unlike other OU courses I was left largely to work on my own. This was challenging as well as rewarding. Seeing the second app slowly be built from a simple map showing my location, to a route that had twenty proximity alerts (used for volunteer testing) was hugely satisfying.\n
+        Programming these apps involved a lot of research into programming for Android. The second app also used the Google maps API.<br>
+        As well as programming the final report also contained use cases, state machine diagram, activity diagram, code beautification and descriptions of how the code was created via prototyping (Scope/Design, Notes on the programming, Testing). <br>
+        Unlike other OU courses I was left largely to work on my own. This was challenging as well as rewarding. Seeing the second app slowly be built from a simple map showing my location, to a route that had twenty proximity alerts (used for volunteer testing) was hugely satisfying.<br>]]>
     </string>
 
     <string name="employment_title">Employment</string>
-    <string name="employment_text"><b>Sanoh UK Manufacturing Ltd</b>\n
-        Quality Auditor (August 2008 – March 2019)\n
-        Shop Floor Operator (June 1997 – August 2008)\n
-        Sanoh produces brake and fuel pipes for the automotive industry. As a quality auditor (and as part of the quality team) it was my job to ensure that the companies quality procedures were being maintained and carried out properly.\n
-        <b>Retainers Ltd</b>\n
-        Supervisor (1986 – 1997)\n
+    <string name="employment_text"><![CDATA[<b>Sanoh UK Manufacturing Ltd</b><br>
+        Quality Auditor (August 2008 – March 2019)<br>
+        Shop Floor Operator (June 1997 – August 2008)<br>
+        Sanoh produces brake and fuel pipes for the automotive industry. As a quality auditor (and as part of the quality team) it was my job to ensure that the companies quality procedures were being maintained and carried out properly.<br>
+        <b>Retainers Ltd</b><br>
+        Supervisor (1986 – 1997)<br>]]>
     </string>
 
     <string name="interests_title">Interests</string>
-    <string name="interests_text">One of my main interests is in technology and gadgets. Keeping up to date with the world of technology is a passion.\n
-     I also enjoy dancing, specifically Le Roc (French jive). I have previously taught classes and still enjoy going to dances and classes.
+    <string name="interests_text"><![CDATA[One of my main interests is in technology and gadgets. Keeping up to date with the world of technology is a passion.<br>
+     I also enjoy dancing, specifically Le Roc (French jive). I have previously taught classes and still enjoy going to dances and classes.]]>
     </string>
+
+    <string-array name="complete">
+        <item>@string/about_me_title</item>
+        <item>@string/about_me_text</item>
+        <item>@string/education_title</item>
+        <item>@string/education_text</item>
+        <item>@string/qualification_title</item>
+        <item>@string/qualification_text</item>
+        <item>@string/computing_project_title</item>
+        <item>@string/computing_project_text</item>
+        <item>@string/employment_title</item>
+        <item>@string/employment_text</item>
+        <item>@string/interests_title</item>
+        <item>@string/interests_text</item>
+    </string-array>
 
 </resources>

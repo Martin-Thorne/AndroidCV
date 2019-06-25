@@ -6,6 +6,9 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.text.Html;
+import android.text.SpannableStringBuilder;
+import android.text.Spanned;
 import android.text.method.LinkMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -146,32 +149,59 @@ public class CVFragment extends Fragment {
         }
     }
 
-    public String setCVText() {
-        String text = "";
+    /**
+     * @return relevant text for each section
+     */
+    public Spanned setCVText() {
+        Spanned text = null;
         switch (page) {
             case 0:
-                text = getString(R.string.main_text);
+                text = Html.fromHtml(getString(R.string.main_text));
                 break;
             case 1:
-                text = getString(R.string.about_me_text);
+                text = getCompleteText();
                 break;
             case 2:
-                text = getString(R.string.education_text);
+                text = Html.fromHtml(getString(R.string.about_me_text));
                 break;
             case 3:
-                text = getString(R.string.qualification_text);
+                text = Html.fromHtml(getString(R.string.education_text));
                 break;
             case 4:
-                text = getString(R.string.computing_project_text);
+                text = Html.fromHtml(getString(R.string.qualification_text));
                 break;
             case 5:
-                text = getString(R.string.employment_text);
+                text = Html.fromHtml(getString(R.string.computing_project_text));
                 break;
             case 6:
-                text = getString(R.string.interests_text);
+                text = Html.fromHtml(getString(R.string.employment_text));
+                break;
+            case 7:
+                text = Html.fromHtml(getString(R.string.interests_text));
                 break;
         }
         return text;
+    }
+
+    /**
+     * Uses a string array to create 'Complete CV'.
+     *
+     * @return complete CV
+     */
+    private Spanned getCompleteText() {
+        // Used to add tags to text to improve layout
+        SpannableStringBuilder complete = new SpannableStringBuilder();
+        String[] array = getResources().getStringArray(R.array.complete);
+        for (int i = 0; i < array.length; i++) {
+            // Separates sections header and main text
+            if ((i % 2) == 0) {
+                // Add tags to header to help separate sections
+                complete.append(Html.fromHtml("<b>" + array[i] + "</b>" + "<br>" + "<br>"));
+            } else {
+                complete.append(Html.fromHtml(array[i] + "<br>"));
+            }
+        }
+        return complete;
     }
 
     /**

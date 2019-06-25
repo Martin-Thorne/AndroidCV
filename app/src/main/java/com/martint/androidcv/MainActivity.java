@@ -125,21 +125,24 @@ public class MainActivity extends AppCompatActivity
                 getSupportActionBar().setTitle(R.string.app_name);
                 break;
             case 1:
-                getSupportActionBar().setTitle(R.string.about_me_title);
+                getSupportActionBar().setTitle(R.string.complete_title);
                 break;
             case 2:
-                getSupportActionBar().setTitle(R.string.education_title);
+                getSupportActionBar().setTitle(R.string.about_me_title);
                 break;
             case 3:
-                getSupportActionBar().setTitle(R.string.qualification_title);
+                getSupportActionBar().setTitle(R.string.education_title);
                 break;
             case 4:
-                getSupportActionBar().setTitle(R.string.computing_project_title);
+                getSupportActionBar().setTitle(R.string.qualification_title);
                 break;
             case 5:
-                getSupportActionBar().setTitle(R.string.employment_title);
+                getSupportActionBar().setTitle(R.string.computing_project_title);
                 break;
             case 6:
+                getSupportActionBar().setTitle(R.string.employment_title);
+                break;
+            case 7:
                 getSupportActionBar().setTitle(R.string.interests_title);
                 break;
         }
