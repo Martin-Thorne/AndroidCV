@@ -21,10 +21,10 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, ViewPager.OnPageChangeListener, PopupMenu.OnMenuItemClickListener {
 
-    ViewPager viewPager;
+    private ViewPager viewPager;
     // Boolean values stating if pop up menu items should be enabled
-    boolean increasePopupEnabled = true;
-    boolean decreasePopupEnabled = true;
+    private boolean increasePopupEnabled = true;
+    private boolean decreasePopupEnabled = true;
 
 
     @Override
@@ -227,14 +227,14 @@ public class MainActivity extends AppCompatActivity
     /**
      * @return if popup menu item 'Increase text size' should be enabled
      */
-    public boolean isIncreasePopupEnabled() {
+    private boolean isIncreasePopupEnabled() {
         return increasePopupEnabled;
     }
 
     /**
      * @return if popup menu item 'Decrease text size' should be enabled
      */
-    public boolean isDecreasePopupEnabled() {
+    private boolean isDecreasePopupEnabled() {
         return decreasePopupEnabled;
     }
 

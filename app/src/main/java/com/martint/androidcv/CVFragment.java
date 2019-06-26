@@ -24,12 +24,8 @@ import com.leinardi.android.speeddial.SpeedDialView;
  */
 public class CVFragment extends Fragment {
 
-    TextView textView;
-    int page;
-
-    public CVFragment() {
-        // Required empty public constructor
-    }
+    private TextView textView;
+    private int page;
 
     /**
      * Used to create an instance of CVFragment
@@ -85,7 +81,7 @@ public class CVFragment extends Fragment {
      *
      * @param view
      */
-    public void setFAB(View view) {
+    private void setFAB(View view) {
         SpeedDialView speedDialView = view.findViewById(R.id.speedDial);
         speedDialView.setVisibility(View.VISIBLE);
         speedDialView.addActionItem(
@@ -128,7 +124,7 @@ public class CVFragment extends Fragment {
     /**
      * Intent to send email
      */
-    public void composeEmail() {
+    private void composeEmail() {
         Intent intent = new Intent(Intent.ACTION_SENDTO);
         intent.setData(Uri.parse("mailto:martinjthorne@gmail.com"));
         if (intent.resolveActivity(getActivity().getPackageManager()) != null) {
@@ -141,7 +137,7 @@ public class CVFragment extends Fragment {
      *
      * @param url
      */
-    public void openWebPage(String url) {
+    private void openWebPage(String url) {
         Uri webpage = Uri.parse(url);
         Intent intent = new Intent(Intent.ACTION_VIEW, webpage);
         if (intent.resolveActivity(getActivity().getPackageManager()) != null) {
@@ -152,7 +148,7 @@ public class CVFragment extends Fragment {
     /**
      * @return relevant text for each section
      */
-    public Spanned setCVText() {
+    private Spanned setCVText() {
         Spanned text = null;
         switch (page) {
             case 0:
