@@ -99,8 +99,11 @@ public class MainActivity extends AppCompatActivity
             case R.id.nav_item_employment:
                 viewPager.setCurrentItem(6, true);
                 break;
-            case R.id.nav_item_interests:
+            case R.id.nav_item_android_apps:
                 viewPager.setCurrentItem(7, true);
+                break;
+            case R.id.nav_item_interests:
+                viewPager.setCurrentItem(8, true);
                 break;
         }
 
@@ -146,6 +149,9 @@ public class MainActivity extends AppCompatActivity
                 getSupportActionBar().setTitle(R.string.employment_title);
                 break;
             case 7:
+                getSupportActionBar().setTitle(R.string.android_apps_title);
+                break;
+            case 8:
                 getSupportActionBar().setTitle(R.string.interests_title);
                 break;
         }

@@ -24,6 +24,9 @@
             android:id="@+id/nav_item_employment"
             android:title="@string/employment_title" />
         <item
+            android:id="@+id/nav_item_android_apps"
+            android:title="@string/android_apps_title" />
+        <item
             android:id="@+id/nav_item_interests"
             android:title="@string/interests_title" />
     </group>

@@ -13,12 +13,13 @@
     <string name="main_title">Home</string>
     <string name="main_text"><![CDATA[This app was created to show potential employees my abilities in coding Android applications.<br>
         It was created using <a href="https://developer.android.com/studio">Android Studio.</a> <br> <br>
-        Navigate between sections by swiping left or right.]]></string>
+        Navigate between sections by swiping left or right or using the navigation drawer.]]></string>
 
     <string name="about_me_title">About Me</string>
-    <string name="about_me_text"><![CDATA[In my last job I worked as a quality auditor for Sanoh UK. I was made redundant at the end of March 2019. This was due to a reduction cars being built, and therefore parts required. I was working evening shifts, which were being greatly reduced, and Sanoh did not feel that they needed anyone from quality on that shift. Since redundancy I have been studying to help improve my programming and maths skills.<br>
-        Whist working for Sanoh I studied with the Open University. The courses have been on computing and IT. In 2012 I achieved a degree. On my way to the degree I obtained a Diploma in Computing and two certificates.<br>
-        One of the main reasons for studying, along with the sense of achievement and interest in the subject, was to change career and work in the areas of computing and IT. My main area of interest is Java programming. This is due to the language, plus learning about object orientated programming, being a major aspect of my study. Plus the programming aspects were the most challenging, fulfilling and enjoyable part of my study. In my final year of OU study I programmed for the Android mobile operating system. I find mobile development very interesting and continue to create apps.<br>]]></string>
+    <string name="about_me_text"><![CDATA[My previous job was quality auditor for Sanoh UK. I was made redundant at the end of March 2019. This was due to a reduction in orders, leading to less people being required to work the evening shift I was on. Since redundancy I have been studying to help improve my programming and other skills.<br>
+        Whist working for Sanoh I studied computing and IT with the Open University. Achieving two certificates, a diploma and degree.<br>
+        Since redundancy I have studied with Udacity and the Open University. In both cases using their free tiers. Udacity, whilst allowing anyone to do courses for free, do not provide certification. The Open University has a selection of free courses which, upon completion, are added to a ‘My achievement’ page.<br>
+       One of the main reasons for studying, along with the sense of achievement and interest in the subject, was to change career and work in the areas of computing and IT. My main area of interest is Java programming. This is due to Java, plus learning about object orientated programming, being a major aspect of my study. Also the programming aspects were the most challenging, fulfilling and enjoyable parts of my study. During  OU study I programmed for the Android mobile operating system. I find mobile development very interesting and have continued to create apps.<br>]]></string>
 
     <string name="education_title">Education</string>
     <string name="education_text"><![CDATA[
@@ -99,7 +100,12 @@
         Title: The Computing And IT Project<br>
         Level: 3<br>
         Points: 30<br>
-        Result: Grade 2<br>]]>
+        Result: Grade 2<br><br>
+
+        <b>The Open University (2019)</b><br>
+        I am working through a selection of free courses. A list of completed ones can be found <a href="https://www.open.edu/openlearn/profiles/mjt272/achievements">here.</a><br>
+        <b>Udacity (2019)</b><br>
+        I am working through <a href="https://eu.udacity.com/course/android-basics-nanodegree-by-google--nd803">‘Android Basics’</a> nanodegree courses.<br> ]]>
     </string>
 
     <string name="qualification_title">Qualifications</string>
@@ -114,11 +120,12 @@
     </string>
 
     <string name="computing_project_title">Computing Project</string>
-    <string name="computing_project_text"><![CDATA[My final year of study included the Computing And IT Project. Unlike other courses the study area was largely left up to the student (as long as it fitted in with previous courses). I chose to write programs for the Google Android mobile operating system. This is done with Java using a SDK from Google.<br>
-        The basic idea was to build two apps that would test the idea that personal navigation could be done via phones vibration function. Advantages of this is that the user is concentrating on the world around them, not their phone. Also, as the phone is not in public view, risk of theft is reduced. \
-        Programming these apps involved a lot of research into programming for Android. The second app also used the Google maps API.<br>
-        As well as programming the final report also contained use cases, state machine diagram, activity diagram, code beautification and descriptions of how the code was created via prototyping (Scope/Design, Notes on the programming, Testing). <br>
-        Unlike other OU courses I was left largely to work on my own. This was challenging as well as rewarding. Seeing the second app slowly be built from a simple map showing my location, to a route that had twenty proximity alerts (used for volunteer testing) was hugely satisfying.<br>]]>
+    <string name="computing_project_text"><![CDATA[My final year of studying with the OU included the Computing And IT Project. The study area was largely left up to the student. I chose to write apps for the Android using Java.<br>
+        The basic idea was to build two apps that would test the idea that personal navigation could be done via phones vibration function.<br>
+        Programming these apps involved a lot of research into programming for Android. The second app also used Google maps.<br>
+        As well as programming the final report also contained use cases, state machine diagram, activity diagram, code beautification and descriptions of how the code was created via prototyping (Scope/Design, Notes on the programming, Testing).<br>
+        The final report can be found <a href="https://drive.google.com/file/d/1LXAl3YT4rAMCeP-iXE-Y3pCHz4RDogFc/view?usp=sharing">here.</a><br>
+        Both apps are on <a href="https://github.com/Martin-Thorne/OU_Android_Naviagation_Project ">GitHub</a>. Also a readme file that goes into more detail on both apps.<br>]]>
     </string>
 
     <string name="employment_title">Employment</string>
@@ -128,6 +135,16 @@
         Sanoh produces brake and fuel pipes for the automotive industry. As a quality auditor (and as part of the quality team) it was my job to ensure that the companies quality procedures were being maintained and carried out properly.<br>
         <b>Retainers Ltd</b><br>
         Supervisor (1986 – 1997)<br>]]>
+    </string>
+
+    <string name="android_apps_title">Android Apps</string>
+    <string name="android_apps_text"><![CDATA[I have recently built two Android apps as a way for me to practice coding and mobile development. The apps can be downloaded from the Google play store with code maintained on GitHub.<br><br>
+        <b>Martin Thorne’s CV:</b><br>
+        This is a mobile version of my CV. It is broken down into sections that the user can get to by either, swiping between them, or using the navigation drawer. A settings popup menu allows the user to increase or decrease the text size. There is also a FAB button that, when tapped, brings up a speed dial with links to GitHub, LinkedIn and my email.<br>
+        <a href="https://play.google.com/store/apps/details?id=com.martint.androidcv">Google Play</a>/<a href="https://github.com/Martin-Thorne/AndroidCV">GitHub</a><br><br>
+        <b>Martin Thorne’s Earthquake App:</b><br>
+        Uses Google maps to show recent earthquakes. The earthquake data is obtained via the United States Geological Survey website. The app parses the JSON data and add markers to the app. Tapping a marker will bring up further info on the earthquake via a window above the marker. When this is tapped the webpage for the earthquake is displayed via the users default browser.<br>
+        <a href="https://play.google.com/store/apps/details?id=com.martint.earthquakeapp">Google Play</a>/<a href="https://github.com/Martin-Thorne/EarthquakeApp ">GitHub</a><br>]]>
     </string>
 
     <string name="interests_title">Interests</string>
@@ -146,6 +163,8 @@
         <item>@string/computing_project_text</item>
         <item>@string/employment_title</item>
         <item>@string/employment_text</item>
+        <item>@string/android_apps_title</item>
+        <item>@string/android_apps_text</item>
         <item>@string/interests_title</item>
         <item>@string/interests_text</item>
     </string-array>
