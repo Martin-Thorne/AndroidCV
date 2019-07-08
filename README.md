@@ -5,6 +5,12 @@ This app is being created as a way for me to practice programming for Android. T
 
 ---------------------------------------------------------------------------------
 
+Android CV V2.1.0 is completed. The release consists of the following:
+
+* Updated to current CV
+
+---------------------------------------------------------------------------------
+
 Android CV V2.0.0 is completed. The release consists of the following:
 
 * Updated to current CV
