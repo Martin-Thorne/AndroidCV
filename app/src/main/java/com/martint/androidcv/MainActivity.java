@@ -90,20 +90,14 @@ public class MainActivity extends AppCompatActivity
             case R.id.nav_item_education:
                 viewPager.setCurrentItem(3, true);
                 break;
-            case R.id.nav_item_qualification:
+            case R.id.nav_item_employment:
                 viewPager.setCurrentItem(4, true);
                 break;
-            case R.id.nav_item_computing_project:
+            case R.id.nav_item_android_apps:
                 viewPager.setCurrentItem(5, true);
                 break;
-            case R.id.nav_item_employment:
-                viewPager.setCurrentItem(6, true);
-                break;
-            case R.id.nav_item_android_apps:
-                viewPager.setCurrentItem(7, true);
-                break;
             case R.id.nav_item_interests:
-                viewPager.setCurrentItem(8, true);
+                viewPager.setCurrentItem(6, true);
                 break;
         }
 
@@ -140,18 +134,12 @@ public class MainActivity extends AppCompatActivity
                 getSupportActionBar().setTitle(R.string.education_title);
                 break;
             case 4:
-                getSupportActionBar().setTitle(R.string.qualification_title);
-                break;
-            case 5:
-                getSupportActionBar().setTitle(R.string.computing_project_title);
-                break;
-            case 6:
                 getSupportActionBar().setTitle(R.string.employment_title);
                 break;
-            case 7:
+            case 5:
                 getSupportActionBar().setTitle(R.string.android_apps_title);
                 break;
-            case 8:
+            case 6:
                 getSupportActionBar().setTitle(R.string.interests_title);
                 break;
         }

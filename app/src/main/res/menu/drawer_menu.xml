@@ -15,12 +15,6 @@
             android:id="@+id/nav_item_education"
             android:title="@string/education_title" />
         <item
-            android:id="@+id/nav_item_qualification"
-            android:title="@string/qualification_title" />
-        <item
-            android:id="@+id/nav_item_computing_project"
-            android:title="@string/computing_project_title" />
-        <item
             android:id="@+id/nav_item_employment"
             android:title="@string/employment_title" />
         <item

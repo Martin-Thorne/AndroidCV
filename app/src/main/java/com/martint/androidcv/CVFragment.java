@@ -164,18 +164,12 @@ public class CVFragment extends Fragment {
                 text = Html.fromHtml(getString(R.string.education_text));
                 break;
             case 4:
-                text = Html.fromHtml(getString(R.string.qualification_text));
-                break;
-            case 5:
-                text = Html.fromHtml(getString(R.string.computing_project_text));
-                break;
-            case 6:
                 text = Html.fromHtml(getString(R.string.employment_text));
                 break;
-            case 7:
+            case 5:
                 text = Html.fromHtml(getString(R.string.android_apps_text));
                 break;
-            case 8:
+            case 6:
                 text = Html.fromHtml(getString(R.string.interests_text));
                 break;
         }
