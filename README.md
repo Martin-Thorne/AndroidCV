@@ -5,10 +5,19 @@ This app is being created as a way for me to practice programming for Android. T
 
 ---------------------------------------------------------------------------------
 
+Android CV V2.0.0 is completed. The release consists of the following:
+
+* Updated to current CV
+* Added 'Complete CV' section
+* New 'Android Apps' section
+* FAB button with speed dial links to GitHub, LinkedIn and email
+* Change text size via the settings menu
+
+---------------------------------------------------------------------------------
+
 Android CV V1.0.0 is completed. The release consists of the following:
 
 * Initial screen: About the app and how to navigate
-* Screen that contains all of my CV
 * Additional screens that each contain sections of my CV
 * Navigation is done by swiping plus navigation drawer
 
