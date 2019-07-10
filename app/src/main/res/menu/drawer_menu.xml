@@ -4,24 +4,31 @@
     <group>
         <item
             android:id="@+id/nav_item_home"
-            android:title="@string/main_title" />
+            android:title="@string/main_title"
+            android:icon="@drawable/ic_home_24px"/>
         <item
             android:id="@+id/nav_item_complete"
-            android:title="@string/complete_title" />
+            android:title="@string/complete_title"
+            android:icon="@drawable/ic_complete_cv_24px"/>
         <item
             android:id="@+id/nav_item_about_me"
-            android:title="@string/about_me_title" />
+            android:title="@string/about_me_title"
+            android:icon="@drawable/ic_about_me_24px"/>
         <item
             android:id="@+id/nav_item_education"
-            android:title="@string/education_title" />
+            android:title="@string/education_title"
+            android:icon="@drawable/ic_education_24px"/>
         <item
             android:id="@+id/nav_item_employment"
-            android:title="@string/employment_title" />
+            android:title="@string/employment_title"
+            android:icon="@drawable/ic_employment_24px"/>
         <item
             android:id="@+id/nav_item_android_apps"
-            android:title="@string/android_apps_title" />
+            android:title="@string/android_apps_title"
+            android:icon="@drawable/ic_android_apps_24px"/>
         <item
             android:id="@+id/nav_item_interests"
-            android:title="@string/interests_title" />
+            android:title="@string/interests_title"
+            android:icon="@drawable/ic_interests_24px"/>
     </group>
 </menu>
