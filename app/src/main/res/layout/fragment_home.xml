@@ -26,6 +26,6 @@
         app:sdMainFabClosedBackgroundColor="@color/colorPrimary"
         app:sdMainFabOpenedBackgroundColor="@color/colorPrimary"
         android:visibility="gone"
-        app:sdMainFabClosedSrc="@drawable/ic_plus_24" />
+        app:sdMainFabClosedSrc="@drawable/ic_add_black_24dp" />
 
 </android.support.design.widget.CoordinatorLayout>

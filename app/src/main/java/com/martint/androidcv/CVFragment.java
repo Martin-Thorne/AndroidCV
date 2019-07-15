@@ -85,7 +85,7 @@ public class CVFragment extends Fragment {
         SpeedDialView speedDialView = view.findViewById(R.id.speedDial);
         speedDialView.setVisibility(View.VISIBLE);
         speedDialView.addActionItem(
-                new SpeedDialActionItem.Builder(R.id.fab_email, R.drawable.ic_email_24)
+                new SpeedDialActionItem.Builder(R.id.fab_email, R.drawable.ic_email_black_24dp)
                         .setLabel(R.string.speed_dial_email)
                         .create()
         );
