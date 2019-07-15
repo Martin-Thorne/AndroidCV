@@ -20,7 +20,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, ViewPager.OnPageChangeListener, PopupMenu.OnMenuItemClickListener {
-
+    private NavigationView navigationView;
     private ViewPager viewPager;
     // Boolean values stating if pop up menu items should be enabled
     private boolean increasePopupEnabled = true;
@@ -38,7 +38,8 @@ public class MainActivity extends AppCompatActivity
 
         // Set up navigation drawer
         DrawerLayout drawerLayout = findViewById(R.id.drawer_layout);
-        NavigationView navigationView = findViewById(R.id.nav_view);
+        navigationView = findViewById(R.id.nav_view);
+        navigationView.setCheckedItem(R.id.nav_item_home);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawerLayout.addDrawerListener(toggle);
@@ -114,7 +115,7 @@ public class MainActivity extends AppCompatActivity
     }
 
     /**
-     * Changes toolBar title to reflect content of page
+     * Changes toolBar title, navigation drawer selected item, to reflect content of page
      *
      * @param i
      */
@@ -123,24 +124,31 @@ public class MainActivity extends AppCompatActivity
         switch (i) {
             case 0:
                 getSupportActionBar().setTitle(R.string.app_name);
+                navigationView.setCheckedItem(R.id.nav_item_home);
                 break;
             case 1:
                 getSupportActionBar().setTitle(R.string.complete_title);
+                navigationView.setCheckedItem(R.id.nav_item_complete);
                 break;
             case 2:
                 getSupportActionBar().setTitle(R.string.about_me_title);
+                navigationView.setCheckedItem(R.id.nav_item_about_me);
                 break;
             case 3:
                 getSupportActionBar().setTitle(R.string.education_title);
+                navigationView.setCheckedItem(R.id.nav_item_education);
                 break;
             case 4:
                 getSupportActionBar().setTitle(R.string.employment_title);
+                navigationView.setCheckedItem(R.id.nav_item_employment);
                 break;
             case 5:
                 getSupportActionBar().setTitle(R.string.android_apps_title);
+                navigationView.setCheckedItem(R.id.nav_item_android_apps);
                 break;
             case 6:
                 getSupportActionBar().setTitle(R.string.interests_title);
+                navigationView.setCheckedItem(R.id.nav_item_interests);
                 break;
         }
     }
