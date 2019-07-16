@@ -14,6 +14,8 @@
             android:id="@+id/homeTextView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
             android:text="@string/main_text" />
 
     </android.support.v4.widget.NestedScrollView>
@@ -23,9 +25,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
-        app:sdMainFabClosedBackgroundColor="@color/colorPrimary"
-        app:sdMainFabOpenedBackgroundColor="@color/colorPrimary"
         android:visibility="gone"
-        app:sdMainFabClosedSrc="@drawable/ic_add_black_24dp" />
+        app:sdMainFabClosedBackgroundColor="@color/colorPrimary"
+        app:sdMainFabClosedSrc="@drawable/ic_add_black_24dp"
+        app:sdMainFabOpenedBackgroundColor="@color/colorPrimary" />
 
 </android.support.design.widget.CoordinatorLayout>

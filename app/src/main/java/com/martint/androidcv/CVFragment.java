@@ -2,6 +2,7 @@ package com.martint.androidcv;
 
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -11,6 +12,7 @@ import android.text.SpannableStringBuilder;
 import android.text.Spanned;
 import android.text.method.LinkMovementMethod;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
@@ -26,6 +28,7 @@ public class CVFragment extends Fragment {
 
     private TextView textView;
     private int page;
+    View view;
 
     /**
      * Used to create an instance of CVFragment
@@ -46,6 +49,7 @@ public class CVFragment extends Fragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         // Gets the required page number
         final Bundle args = getArguments();
         page = args.getInt("pageInt", 0);
@@ -54,7 +58,7 @@ public class CVFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view;
+
         // Inflate the layout for this fragment. Home page has FAB speed dial so has separate layout.
         if (page == 0) {
             view = inflater.inflate(R.layout.fragment_home, container, false);
@@ -73,6 +77,8 @@ public class CVFragment extends Fragment {
         //Sets the text size
         textView.setTextSize(getResources().getInteger(Settings.getTextSize()));
 
+        // Sets the display mode
+        setDisplayModeSettings();
         return view;
     }
 
@@ -186,8 +192,10 @@ public class CVFragment extends Fragment {
         SpannableStringBuilder complete = new SpannableStringBuilder();
         String[] array = getResources().getStringArray(R.array.complete);
         for (int i = 0; i < array.length; i++) {
+
             // Separates sections header and main text
             if ((i % 2) == 0) {
+
                 // Add tags to header to help separate sections
                 complete.append(Html.fromHtml("<b>" + array[i] + "</b>" + "<br>" + "<br>"));
             } else {
@@ -198,17 +206,70 @@ public class CVFragment extends Fragment {
     }
 
     /**
-     * Used when user wishes to changes text size
+     * Used when user wishes to changes text size. Used when fragment is first to be called
+     * by MainActivity
      *
-     * @param textSelection    Indicates if user wants to increase/decrease text size
-     * @param fragmentSelected
+     * @param textSelection Indicates if user wants to increase/decrease text size
+     * @return new text size to MainActivity
      */
-    public int setTextSize(int textSelection, int fragmentSelected) {
-        //If fragment was the first in collection it sets the text size
-        if (fragmentSelected == 0) {
-            Settings.setTextSize(textSelection);
-        }
+    public int setTextSize(int textSelection) {
+        // Sets the text size in Settings
+        Settings.setTextSize(textSelection);
+
+        // Sets fragments text size
         textView.setTextSize(getResources().getInteger(Settings.getTextSize()));
         return Settings.getTextSize();
+    }
+
+    /**
+     * Used when user wishes to changes text size. Overloaded method used when fragment is not first to be called
+     * by MainActivity
+     */
+    public void setTextSize() {
+        // Sets fragments text size
+        textView.setTextSize(getResources().getInteger(Settings.getTextSize()));
+    }
+
+    /**
+     * Used when user wishes to change display mode. Used when fragment is first to be called
+     * by MainActivity
+     *
+     * @param menuItem Indicates if fragment should be changed to dark or light mode
+     * @return Boolean value indicating if the dark mode is enabled or not
+     */
+    public boolean setDisplayMode(MenuItem menuItem) {
+        //Sets the display mode in Settings
+//        if (menuItem.getTitle().equals("Dark mode")) {
+        if (menuItem.getTitle() == getString(R.string.settings_popup_reading_mode_dark)) {
+            Settings.setDarkModeEnabled(true);
+        } else {
+            Settings.setDarkModeEnabled(false);
+        }
+
+        // Sets fragments display mode
+        setDisplayModeSettings();
+        return Settings.isDarkModeEnabled();
+    }
+
+    /**
+     * Used when user wishes to change display mode. Overloaded method used when fragment is not first to be called
+     * by MainActivity
+     */
+    public void setDisplayMode() {
+        // Sets fragments display mode
+        setDisplayModeSettings();
+    }
+
+    /**
+     * Changes fragments text and background colors to users settings
+     */
+    private void setDisplayModeSettings() {
+        if (Settings.isDarkModeEnabled()) {
+            textView.setTextColor(Color.WHITE);
+            view.setBackgroundColor(Color.BLACK);
+        } else {
+            textView.setTextColor(Color.BLACK);
+            view.setBackgroundColor(Color.WHITE);
+        }
     }
 }

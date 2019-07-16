@@ -6,6 +6,7 @@ package com.martint.androidcv;
 public class Settings {
 
     private static int textSize = R.integer.text_size_medium;
+    private static boolean darkModeEnabled = false;
 
     private Settings() {
     }
@@ -46,5 +47,21 @@ public class Settings {
                     break;
             }
         }
+    }
+
+    /**
+     * @return if dark mode is enabled
+     */
+    public static boolean isDarkModeEnabled() {
+        return darkModeEnabled;
+    }
+
+    /**
+     * Sets the state of dark mode
+     *
+     * @param darkModeEnabled
+     */
+    public static void setDarkModeEnabled(boolean darkModeEnabled) {
+        Settings.darkModeEnabled = darkModeEnabled;
     }
 }

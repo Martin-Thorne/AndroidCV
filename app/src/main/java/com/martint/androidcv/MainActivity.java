@@ -22,9 +22,11 @@ public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, ViewPager.OnPageChangeListener, PopupMenu.OnMenuItemClickListener {
     private NavigationView navigationView;
     private ViewPager viewPager;
-    // Boolean values stating if pop up menu items should be enabled
+    // Boolean values stating if pop up menu text size items should be enabled
     private boolean increasePopupEnabled = true;
     private boolean decreasePopupEnabled = true;
+    // Boolean value stating if dark mode is currently enabled
+    private boolean darkModeEnabled = false;
 
 
     @Override
@@ -169,15 +171,24 @@ public class MainActivity extends AppCompatActivity
         int menu = item.getItemId();
         if (menu == R.id.action_settings) {
             View view = this.findViewById(R.id.action_settings);
+
             // Opens popup menu and sets up listener for item selection
             PopupMenu popup = new PopupMenu(this, view);
             popup.setOnMenuItemClickListener(this);
             MenuInflater inflater = popup.getMenuInflater();
             inflater.inflate(R.menu.popup_menu, popup.getMenu());
             popup.show();
+
             // Checks if popup menu items should be enabled. This is dependant on text size.
             popup.getMenu().findItem(R.id.increase_text_size).setEnabled(isIncreasePopupEnabled());
             popup.getMenu().findItem(R.id.decrease_text_size).setEnabled(isDecreasePopupEnabled());
+
+            // Checks if dark mode is currently enabled and sets the text accordingly
+            if (isDarkModeEnabled()) {
+                popup.getMenu().findItem(R.id.change_reading_mode).setTitle(R.string.settings_popup_reading_mode_light);
+            } else {
+                popup.getMenu().findItem(R.id.change_reading_mode).setTitle(R.string.settings_popup_reading_mode_dark);
+            }
             return true;
         }
         return super.onOptionsItemSelected(item);
@@ -191,18 +202,31 @@ public class MainActivity extends AppCompatActivity
      */
     @Override
     public boolean onMenuItemClick(MenuItem menuItem) {
-
         // Collection of all active fragments
         List<Fragment> allFragments = getSupportFragmentManager().getFragments();
-        // Holds the choice to increase/decrease text size
+
+        // Holds the choice to increase/decrease text size or change display mode
         int itemId = menuItem.getItemId();
         int textSize = R.integer.text_size_medium;
-        // Takes all active fragments and updates the text size
+
+        // Takes all active fragments and updates the text size or display mode
         for (int i = 0; i < allFragments.size(); i++) {
             Fragment fragment = allFragments.get(i);
-            // i is used to ensure that only the first looped fragment sets the text size in Settings.
-            // Return value is the text size after change
-            textSize = ((CVFragment) fragment).setTextSize(itemId, i);
+
+            // First fragment call used to set text size/display mode in Settings and return updated values
+            if (i == 0) {
+                if (itemId != R.id.change_reading_mode) {
+                    textSize = ((CVFragment) fragment).setTextSize(itemId);
+                } else {
+                    darkModeEnabled = ((CVFragment) fragment).setDisplayMode(menuItem);
+                }
+
+                // Subsequent fragment set text size/ display mode
+            } else if (itemId != R.id.change_reading_mode) {
+                ((CVFragment) fragment).setTextSize();
+            } else {
+                ((CVFragment) fragment).setDisplayMode();
+            }
         }
         setPopupItemEnabled(itemId, textSize);
         allFragments.clear();
@@ -240,4 +264,10 @@ public class MainActivity extends AppCompatActivity
         return decreasePopupEnabled;
     }
 
+    /**
+     * @return if dark mode is currently enabled
+     */
+    public boolean isDarkModeEnabled() {
+        return darkModeEnabled;
+    }
 }

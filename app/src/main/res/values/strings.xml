@@ -9,6 +9,8 @@
     <string name="settings_menu">Settings</string>
     <string name="settings_popup_increase_text_size">Increase text size</string>
     <string name="settings_popup_decrease_text_size">Decrease text size</string>
+    <string name="settings_popup_reading_mode_dark">Dark mode</string>
+    <string name="settings_popup_reading_mode_light">Light mode</string>
     <string name="complete_title">Complete CV</string>
 
     <string name="main_title">Home</string>

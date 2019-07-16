@@ -8,4 +8,8 @@
         android:id="@+id/decrease_text_size"
         android:title="@string/settings_popup_decrease_text_size" />
 
+    <item
+        android:id="@+id/change_reading_mode"
+        android:title="@string/settings_popup_reading_mode_dark" />
+
 </menu>
