@@ -26,8 +26,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:visibility="gone"
-        app:sdMainFabClosedBackgroundColor="?attr/colorPrimary"
-        app:sdMainFabClosedSrc="@drawable/ic_add_black_24dp"
-        app:sdMainFabOpenedBackgroundColor="?attr/colorPrimary" />
+        app:sdMainFabClosedSrc="@drawable/ic_add_black_24dp" />
 
 </android.support.design.widget.CoordinatorLayout>
