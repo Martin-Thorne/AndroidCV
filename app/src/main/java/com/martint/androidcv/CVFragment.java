@@ -2,7 +2,6 @@ package com.martint.androidcv;
 
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -12,7 +11,6 @@ import android.text.SpannableStringBuilder;
 import android.text.Spanned;
 import android.text.method.LinkMovementMethod;
 import android.view.LayoutInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
@@ -64,7 +62,6 @@ public class CVFragment extends Fragment {
             view = inflater.inflate(R.layout.fragment_home, container, false);
             textView = view.findViewById(R.id.homeTextView);
             setFAB(view);
-
         } else {
             view = inflater.inflate(R.layout.fragment_cv, container, false);
             textView = view.findViewById(R.id.CVTextView);
@@ -77,8 +74,6 @@ public class CVFragment extends Fragment {
         //Sets the text size
         textView.setTextSize(getResources().getInteger(Settings.getTextSize()));
 
-        // Sets the display mode
-        setDisplayModeSettings();
         return view;
     }
 
@@ -228,48 +223,5 @@ public class CVFragment extends Fragment {
     public void setTextSize() {
         // Sets fragments text size
         textView.setTextSize(getResources().getInteger(Settings.getTextSize()));
-    }
-
-    /**
-     * Used when user wishes to change display mode. Used when fragment is first to be called
-     * by MainActivity
-     *
-     * @param menuItem Indicates if fragment should be changed to dark or light mode
-     * @return Boolean value indicating if the dark mode is enabled or not
-     */
-    public boolean setDisplayMode(MenuItem menuItem) {
-        //Sets the display mode in Settings
-//        if (menuItem.getTitle().equals("Dark mode")) {
-        if (menuItem.getTitle() == getString(R.string.settings_popup_reading_mode_dark)) {
-            Settings.setDarkModeEnabled(true);
-        } else {
-            Settings.setDarkModeEnabled(false);
-        }
-
-        // Sets fragments display mode
-        setDisplayModeSettings();
-        return Settings.isDarkModeEnabled();
-    }
-
-    /**
-     * Used when user wishes to change display mode. Overloaded method used when fragment is not first to be called
-     * by MainActivity
-     */
-    public void setDisplayMode() {
-        // Sets fragments display mode
-        setDisplayModeSettings();
-    }
-
-    /**
-     * Changes fragments text and background colors to users settings
-     */
-    private void setDisplayModeSettings() {
-        if (Settings.isDarkModeEnabled()) {
-            textView.setTextColor(Color.WHITE);
-            view.setBackgroundColor(Color.BLACK);
-        } else {
-            textView.setTextColor(Color.BLACK);
-            view.setBackgroundColor(Color.WHITE);
-        }
     }
 }

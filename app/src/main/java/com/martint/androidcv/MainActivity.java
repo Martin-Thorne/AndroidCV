@@ -27,11 +27,23 @@ public class MainActivity extends AppCompatActivity
     private boolean decreasePopupEnabled = true;
     // Boolean value stating if dark mode is currently enabled
     private boolean darkModeEnabled = false;
+    // String value used as key for when activity is recreated
+    static final String STATE_DISPLAY_MODE = "display mode";
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        // Sets theme when activity is recreated
+        if (savedInstanceState != null) {
+            darkModeEnabled = savedInstanceState.getBoolean(STATE_DISPLAY_MODE);
+            if (darkModeEnabled) {
+                setTheme(R.style.Theme_MyApp);
+            } else {
+                setTheme(R.style.AppTheme);
+            }
+        }
         setContentView(R.layout.activity_main);
 
         //Set up toolbar
@@ -213,23 +225,29 @@ public class MainActivity extends AppCompatActivity
         for (int i = 0; i < allFragments.size(); i++) {
             Fragment fragment = allFragments.get(i);
 
-            // First fragment call used to set text size/display mode in Settings and return updated values
+            // First fragment call used to set text size in Settings and return updated values
             if (i == 0) {
                 if (itemId != R.id.change_reading_mode) {
                     textSize = ((CVFragment) fragment).setTextSize(itemId);
-                } else {
-                    darkModeEnabled = ((CVFragment) fragment).setDisplayMode(menuItem);
                 }
 
-                // Subsequent fragment set text size/ display mode
+                // Subsequent fragments set text size
             } else if (itemId != R.id.change_reading_mode) {
                 ((CVFragment) fragment).setTextSize();
-            } else {
-                ((CVFragment) fragment).setDisplayMode();
             }
         }
         setPopupItemEnabled(itemId, textSize);
         allFragments.clear();
+
+        // If user changes theme boolean value is flipped and activity is recreated to implement new theme
+        if (itemId == R.id.change_reading_mode) {
+            if (darkModeEnabled) {
+                darkModeEnabled = false;
+            } else {
+                darkModeEnabled = true;
+            }
+            recreate();
+        }
         return true;
     }
 
@@ -269,5 +287,18 @@ public class MainActivity extends AppCompatActivity
      */
     public boolean isDarkModeEnabled() {
         return darkModeEnabled;
+    }
+
+    /**
+     * Used to save the state of display mode for orientation/ display mode change
+     *
+     * @param savedInstanceState
+     */
+    @Override
+    public void onSaveInstanceState(Bundle savedInstanceState) {
+
+        savedInstanceState.putBoolean(STATE_DISPLAY_MODE, isDarkModeEnabled());
+
+        super.onSaveInstanceState(savedInstanceState);
     }
 }
