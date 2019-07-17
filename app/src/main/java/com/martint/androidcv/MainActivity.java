@@ -27,17 +27,21 @@ public class MainActivity extends AppCompatActivity
     private boolean decreasePopupEnabled = true;
     // Boolean value stating if dark mode is currently enabled
     private boolean darkModeEnabled = false;
-    // String value used as key for when activity is recreated
+    // String values used as key for when activity is recreated
     static final String STATE_DISPLAY_MODE = "display mode";
+    static final String STATE_INCREASE_POPUP_ENABLED = "increase popup enabled";
+    static final String STATE_DECREASE_POPUP_ENABLED = "decrease popup enabled";
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        // Sets theme when activity is recreated
+        // Sets theme/ popup values when activity is recreated
         if (savedInstanceState != null) {
             darkModeEnabled = savedInstanceState.getBoolean(STATE_DISPLAY_MODE);
+            increasePopupEnabled = savedInstanceState.getBoolean(STATE_INCREASE_POPUP_ENABLED);
+            decreasePopupEnabled = savedInstanceState.getBoolean(STATE_DECREASE_POPUP_ENABLED);
             if (darkModeEnabled) {
                 setTheme(R.style.Theme_MyApp);
             } else {
@@ -229,6 +233,7 @@ public class MainActivity extends AppCompatActivity
             if (i == 0) {
                 if (itemId != R.id.change_reading_mode) {
                     textSize = ((CVFragment) fragment).setTextSize(itemId);
+                    setPopupItemEnabled(itemId, textSize);
                 }
 
                 // Subsequent fragments set text size
@@ -236,7 +241,6 @@ public class MainActivity extends AppCompatActivity
                 ((CVFragment) fragment).setTextSize();
             }
         }
-        setPopupItemEnabled(itemId, textSize);
         allFragments.clear();
 
         // If user changes theme boolean value is flipped and activity is recreated to implement new theme
@@ -298,6 +302,8 @@ public class MainActivity extends AppCompatActivity
     public void onSaveInstanceState(Bundle savedInstanceState) {
 
         savedInstanceState.putBoolean(STATE_DISPLAY_MODE, isDarkModeEnabled());
+        savedInstanceState.putBoolean(STATE_INCREASE_POPUP_ENABLED, isIncreasePopupEnabled());
+        savedInstanceState.putBoolean(STATE_DECREASE_POPUP_ENABLED, isDecreasePopupEnabled());
 
         super.onSaveInstanceState(savedInstanceState);
     }
