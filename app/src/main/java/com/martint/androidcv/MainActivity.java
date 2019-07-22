@@ -43,9 +43,7 @@ public class MainActivity extends AppCompatActivity
             increasePopupEnabled = savedInstanceState.getBoolean(STATE_INCREASE_POPUP_ENABLED);
             decreasePopupEnabled = savedInstanceState.getBoolean(STATE_DECREASE_POPUP_ENABLED);
             if (darkModeEnabled) {
-                setTheme(R.style.Theme_MyApp);
-            } else {
-                setTheme(R.style.AppTheme);
+                setTheme(R.style.Theme_Dark);
             }
         }
         setContentView(R.layout.activity_main);

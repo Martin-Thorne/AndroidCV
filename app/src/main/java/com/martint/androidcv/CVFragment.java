@@ -91,12 +91,12 @@ public class CVFragment extends Fragment {
                         .create()
         );
         speedDialView.addActionItem(
-                new SpeedDialActionItem.Builder(R.id.fab_linkedIn, R.drawable.ic_linkedin_24)
+                new SpeedDialActionItem.Builder(R.id.fab_linkedIn, R.drawable.ic_linkedin)
                         .setLabel(R.string.speed_dial_linkedin)
                         .create()
         );
         speedDialView.addActionItem(
-                new SpeedDialActionItem.Builder(R.id.fab_gitHub, R.drawable.ic_github_24)
+                new SpeedDialActionItem.Builder(R.id.fab_gitHub, R.drawable.ic_github)
                         .setLabel(R.string.speed_dial_github)
                         .create()
         );

@@ -48,20 +48,4 @@ public class Settings {
             }
         }
     }
-
-//    /**
-//     * @return if dark mode is enabled
-//     */
-//    public static boolean isDarkModeEnabled() {
-//        return darkModeEnabled;
-//    }
-//
-//    /**
-//     * Sets the state of dark mode
-//     *
-//     * @param darkModeEnabled
-//     */
-//    public static void setDarkModeEnabled(boolean darkModeEnabled) {
-//        Settings.darkModeEnabled = darkModeEnabled;
-//    }
 }
