@@ -28,7 +28,7 @@
     <string name="education_text"><![CDATA[<b>OpenLearn (2019):</b><br>
         This offshoot of the Open University has a large selection of free courses.<br><br>
         Courses completed:<br>
-        Everyday Maths: Succeed With Maths Part 1: Succeed With Maths Part 2: Introduction to Computational Thinking: Modelling object-oriented software: Representing and manipulating data in computers<br>
+        Everyday Maths: Succeed With Maths Part 1: Succeed With Maths Part 2: Introduction to Computational Thinking: Modelling object-oriented software: Representing and manipulating data in computers: Everyday English 1: The database development life cycle<br>
         My OpenLearn profile can be found <a href="https://www.open.edu/openlearn/profiles/mjt272/achievements">here.</a><br><br>
 
         <b>Udacity (2019):</b><br>
@@ -46,7 +46,8 @@
         <li>Experience with programming languages: Java, Visual Basic and C++.</li>
         <li>Use of different IDE's: Visual Basic 2008 Express Edition, BlueJ, Eclipse and Netbeans.</li>
         <li>How to use different aspects of Object Orientation: Analysis and specification, design, programming, testing and maintenance.</li>
-        <li>An understanding of how computing and network systems work.</li>]]>
+        <li>An understanding of how computing and network systems work.</li>
+        <li>Improvements in my maths and English skills.</li>]]>
     </string>
 
     <string name="employment_title">Employment</string>
@@ -63,7 +64,7 @@
 
     <string name="android_apps_title">Android Apps</string>
     <string name="android_apps_text"><![CDATA[<b>CV App:</b><br>
-        This is a mobile version of my CV. It is broken down into sections that the user can get to by either, swiping between screens, or using the navigation drawer. A settings popup menu allows the user to increase or decrease the text size. There is also a FAB button that, when tapped, brings up a speed dial with links to GitHub, LinkedIn and my email.<br>
+        This is a mobile version of my CV. It is broken down into sections that the user can get to by either, swiping between screens, or using the navigation drawer. A settings popup menu allows the user to increase/decrease the text size, as well as change the app theme. There is also a FAB button that, when tapped, brings up a speed dial with links to GitHub, LinkedIn and my email.<br>
         <a href="https://play.google.com/store/apps/details?id=com.martint.androidcv">Google Play</a>/<a href="https://github.com/Martin-Thorne/AndroidCV">GitHub</a><br><br>
 
         <b>Earthquake App:</b><br>
