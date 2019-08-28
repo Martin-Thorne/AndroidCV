@@ -18,22 +18,22 @@
         It was created using <a href="https://developer.android.com/studio">Android Studio.</a> <br> <br>
         Navigate between sections by swiping left or right or using the navigation drawer.]]></string>
 
-    <string name="about_me_title">About Me</string>
-    <string name="about_me_text"><![CDATA[Self motivated and hard working individual looking to change careers.<br>
-       Having achieved a 2.1 honours degree in information technology and computing, along with other qualifications, whilst working full time helped me improve qualities such as time management, dedication, ambition and commitment.<br>
-       Recently made redundant, due to falling orders, my job was as a quality auditor for Sanoh UK, a parts supplier for the automotive industry. Since then I have continued to study, via free online courses, and create apps for Android.<br>
-       I am looking to work in the areas of computing and IT. My main area of expertise is programming. This was the most challenging and enjoyable aspect of my studies.<br>]]></string>
+    <string name="professional_profile_title">Professional Profile</string>
+    <string name="professional_profile_text"><![CDATA[Self motivated and hard working individual looking to change careers.<br>
+       Achieved a 2.1 honours degree in information technology and computing, along with other qualifications, whilst working full time. Excellent time management, dedication, ambition and commitment.<br>
+       Recently made redundant, due to falling orders, my job was as a quality auditor for Sanoh UK, a parts supplier for the automotive industry. Since then I have continued to study, via online courses, and create apps for Android.<br>
+       Seeking work in computing and IT. Expert in software development, Apps and programming.<br>]]></string>
 
     <string name="education_title">Education</string>
     <string name="education_text"><![CDATA[<b>OpenLearn (2019):</b><br>
         This offshoot of the Open University has a large selection of free courses.<br><br>
         Courses completed:<br>
-        Everyday Maths: Succeed With Maths Part 1: Succeed With Maths Part 2: Introduction to Computational Thinking: Modelling object-oriented software: Representing and manipulating data in computers: Everyday English 1: The database development life cycle<br>
+        Everyday Maths: Succeed With Maths Part 1: Succeed With Maths Part 2: Introduction to Computational Thinking: Modelling object-oriented software: Representing and manipulating data in computers: Everyday English 1: The database development life cycle: Everyday English 2<br>
         My OpenLearn profile can be found <a href="https://www.open.edu/openlearn/profiles/mjt272/achievements">here.</a><br><br>
 
         <b>Udacity (2019):</b><br>
         ‘Android Basics’ nano-degree courses completed:<br>
-        User Interface: User Input: Multiscreen Apps: Networking<br><br>
+        User Interface: User Input: Multiscreen Apps: Networking: Data Storage<br><br>
 
         <b>Open University:</b><br>
         2012: Bachelor of Science (Honours) in Information Technology and Computing (2.1)<br>
@@ -44,7 +44,7 @@
         The Computing And IT Project: Fundamentals Of Interaction Design: Keeping Ahead In Information And Communication Technologies: Software Engineering With Objects: Communication And Information Technologies: Computer And Processors: Designing Applications With Visual Basic: Software Development With Java: Open Mathematics: Putting Computer Systems To Work: Object-Orientated Programming With Java: Data, Computing And Information: You, Your Computer And The Net<br><br>
         Skills acquired through study:
         <li>Experience with programming languages: Java, Visual Basic and C++.</li>
-        <li>Use of different IDE's: Visual Basic 2008 Express Edition, BlueJ, Eclipse and Netbeans.</li>
+        <li>Use of different IDE\'s: Visual Basic 2008 Express Edition, BlueJ, Eclipse and Netbeans.</li>
         <li>How to use different aspects of Object Orientation: Analysis and specification, design, programming, testing and maintenance.</li>
         <li>An understanding of how computing and network systems work.</li>
         <li>Improvements in my maths and English skills.</li>]]>
@@ -53,13 +53,13 @@
     <string name="employment_title">Employment</string>
     <string name="employment_text"><![CDATA[<b>Sanoh UK Manufacturing Ltd</b><br>
         Quality Auditor (August 2008 – March 2019)<br>
-        Sanoh produces brake and fuel pipes for the automotive industry. As a quality auditor (and as part of the quality team) it was my responsibility to ensure that the companies quality procedures were being maintained and carried out properly.<br><br>
+        Sanoh produces brake and fuel pipes for the automotive industry. As a quality auditor it was my responsibility to ensure that the company’s quality procedures were being maintained and carried out properly.<br><br>
         Skills acquired through work:
-        <li>Working within the quality department has given me a keen eye for detail.</li>
-        <li>Take precise measurements, using various tools, to ensure parts are within 	customer specifications.</li>
-        <li>Be a good communicator and be approachable.</li>
-        <li>To work independently using initiative, along with problem solving skills, when investigating potential quality issues.</li>
-        <li>Work effectively as part of the quality team.</li>]]>
+        <li>Keen eye for detail.</li>
+        <li>Precision; measuring using various tools, to ensure parts are within customer specifications.</li>
+        <li>Good communication skills both with employees and management.</li>
+        <li>Independently working, using own initiative, to investigate quality issues and to problem solve.</li>
+        <li>Equally effective within the wider quality team..</li>]]>
     </string>
 
     <string name="android_apps_title">Android Apps</string>
@@ -86,8 +86,8 @@
     </string>
 
     <string-array name="complete">
-        <item>@string/about_me_title</item>
-        <item>@string/about_me_text</item>
+        <item>@string/professional_profile_title</item>
+        <item>@string/professional_profile_text</item>
         <item>@string/education_title</item>
         <item>@string/education_text</item>
         <item>@string/employment_title</item>
