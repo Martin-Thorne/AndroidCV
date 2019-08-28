@@ -5,6 +5,14 @@ This app is being created as a way for me to practice programming for Android. T
 
 ---------------------------------------------------------------------------------
 
+Android CV V3.0.0 is completed. The release consists of the following:
+
+* Updated to current CV
+* Updated navigation drawer
+* Added dark mode to the settings menu
+
+---------------------------------------------------------------------------------
+
 Android CV V2.1.0 is completed. The release consists of the following:
 
 * Updated to current CV
