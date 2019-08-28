@@ -147,7 +147,7 @@ public class MainActivity extends AppCompatActivity
                 navigationView.setCheckedItem(R.id.nav_item_complete);
                 break;
             case 2:
-                getSupportActionBar().setTitle(R.string.about_me_title);
+                getSupportActionBar().setTitle(R.string.professional_profile_title);
                 navigationView.setCheckedItem(R.id.nav_item_about_me);
                 break;
             case 3:

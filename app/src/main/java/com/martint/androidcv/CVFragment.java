@@ -159,7 +159,7 @@ public class CVFragment extends Fragment {
                 text = getCompleteText();
                 break;
             case 2:
-                text = Html.fromHtml(getString(R.string.about_me_text));
+                text = Html.fromHtml(getString(R.string.professional_profile_text));
                 break;
             case 3:
                 text = Html.fromHtml(getString(R.string.education_text));

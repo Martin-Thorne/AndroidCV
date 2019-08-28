@@ -13,7 +13,7 @@
         <item
             android:id="@+id/nav_item_about_me"
             android:icon="@drawable/ic_about_me_24px"
-            android:title="@string/about_me_title" />
+            android:title="@string/professional_profile_title" />
         <item
             android:id="@+id/nav_item_education"
             android:icon="@drawable/ic_education_24px"
