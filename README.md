@@ -2,6 +2,11 @@ Android CV
 =====================
 
 This app is being created as a way for me to practice programming for Android. The app displays my CV along with ways to contact me.
+---------------------------------------------------------------------------------
+
+Android CV V3.1.0 is completed. The release consists of the following:
+
+* Updated to current CV
 
 ---------------------------------------------------------------------------------
 
